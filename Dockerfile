@@ -5,7 +5,7 @@ RUN echo 'deb http://deb.debian.org/debian bullseye main' > /etc/apt/sources.lis
 RUN apt-get install -y --no-install-recommends \
     aria2 \
     chromium \
-    chromium-driver \
+    chromium-chromedriver \
     curl \
     git \
     g++ \
@@ -18,4 +18,4 @@ RUN apt-get install -y --no-install-recommends \
     libevent-dev \
     neofetch \
     netbase \
-    sudo
+
