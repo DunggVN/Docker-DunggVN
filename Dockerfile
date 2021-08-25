@@ -5,7 +5,6 @@ RUN echo 'deb http://deb.debian.org/debian bullseye main contrib non-free' > /et
 RUN apt-get install -y --no-install-recommends \
     aria2 \
     chromium \
-    chromium-chromedriver \
     curl \
     git \
     g++ \
@@ -17,5 +16,9 @@ RUN apt-get install -y --no-install-recommends \
     libpq-dev \
     libevent-dev \
     neofetch \
-    netbase \
+    netbase
+ENV version=$(curl -s "https://chromedriver.storage.googleapis.com/LATEST_RELEASE")
+RUN wget -qP /tmp/ "https://chromedriver.storage.googleapis.com/$version/chromedriver_linux64.zip"
+RUN unzip -o /tmp/chromedriver_linux64.zip -d /usr/bin
+RUN chmod 755 /usr/bin/chromedriver
 
