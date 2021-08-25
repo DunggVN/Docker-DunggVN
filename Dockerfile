@@ -18,6 +18,6 @@ RUN apt-get install -y --no-install-recommends \
     neofetch \
     netbase
 RUN wget -qP /tmp/ "https://chromedriver.storage.googleapis.com/2.31/chromedriver_linux64.zip" \
-&& unzip -o /tmp/chromedriver_linux64.zip -d /usr/bin \
-&& chmod 755 /usr/bin/chromedriver
+RUN unzip -o /tmp/chromedriver_linux64.zip -d /usr/bin \
+RUN chmod 755 /usr/bin/chromedriver
 
