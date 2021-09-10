@@ -19,11 +19,11 @@ RUN apt-get install -y --no-install-recommends \
     netbase \
     wget \
     unzip \
-    python-pip
+    python3-pip
 RUN wget -qP /tmp/ "https://chromedriver.storage.googleapis.com/2.41/chromedriver_linux64.zip"
 RUN unzip -o /tmp/chromedriver_linux64.zip -d /usr/bin
 RUN chmod 755 /usr/bin/chromedriver
-RUN pip install --upgrade pip && \
-    pip install --upgrade setuptools && \
-    pip install wheel && \
-    pip install ez_setup
+RUN pip3 install --upgrade pip && \
+    pip3 install --upgrade setuptools && \
+    pip3 install wheel && \
+    pip3 install ez_setup
