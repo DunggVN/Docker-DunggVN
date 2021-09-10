@@ -1,4 +1,4 @@
-FROM python:3.9.6-slim-bullseye
+FROM google/cloud-sdk:slim
 ENV DEBIAN_FRONTEND=noninteractive
 RUN echo 'deb http://deb.debian.org/debian bullseye main contrib non-free' > /etc/apt/sources.list.d/docker.list && \
     apt-get update 
