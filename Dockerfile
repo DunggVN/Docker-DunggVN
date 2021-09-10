@@ -23,6 +23,7 @@ RUN apt-get install -y --no-install-recommends \
 RUN wget -qP /tmp/ "https://chromedriver.storage.googleapis.com/2.41/chromedriver_linux64.zip"
 RUN unzip -o /tmp/chromedriver_linux64.zip -d /usr/bin
 RUN chmod 755 /usr/bin/chromedriver
-RUN pip install --upgrade setuptools && \
+RUN pip install --upgrade pip && \
+    pip install --upgrade setuptools && \
     pip install wheel && \
     pip install ez_setup
