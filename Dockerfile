@@ -24,4 +24,5 @@ RUN wget -qP /tmp/ "https://chromedriver.storage.googleapis.com/2.41/chromedrive
 RUN unzip -o /tmp/chromedriver_linux64.zip -d /usr/bin
 RUN chmod 755 /usr/bin/chromedriver
 RUN pip install --upgrade setuptools && \
+    pip install wheel && \
     pip install ez_setup
