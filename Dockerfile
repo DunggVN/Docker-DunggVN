@@ -12,7 +12,6 @@ RUN apt-get install -y --no-install-recommends \
     g++ \
     build-essential \
     gnupg2 \
-    figlet \
     ffmpeg \
     jq \
     libpq-dev \
