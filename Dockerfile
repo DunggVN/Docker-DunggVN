@@ -21,4 +21,5 @@ RUN apt-get install -y --no-install-recommends \
     netbase \
     wget \
     unzip \
+    xz-utils \
     python3-pip
