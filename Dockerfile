@@ -22,4 +22,6 @@ RUN apt-get install -y --no-install-recommends \
     wget \
     unzip \
     xz-utils \
-    python3-pip
+    python3-pip \
+    python3-psycopg2
+RUN pip3 install --upgrade pip
