@@ -1,10 +1,12 @@
-FROM google/cloud-sdk:slim
+FROM ubuntu:21.04
 ENV DEBIAN_FRONTEND=noninteractive
-RUN echo 'deb http://deb.debian.org/debian buster main contrib non-free' > /etc/apt/sources.list.d/docker.list && \
-    apt-get update 
+RUN echo "deb http://us.archive.ubuntu.com/ubuntu/ hirsute universe restricted" > /etc/apt/sources.list && \
+    apt-get update && \
+    apt-get upgrade
 RUN apt-get install -y --no-install-recommends \
     aria2 \
     chromium \
+    chromium-chromedriver \
     curl \
     git \
     g++ \
@@ -20,10 +22,3 @@ RUN apt-get install -y --no-install-recommends \
     wget \
     unzip \
     python3-pip
-RUN wget -qP /tmp/ "https://chromedriver.storage.googleapis.com/2.41/chromedriver_linux64.zip"
-RUN unzip -o /tmp/chromedriver_linux64.zip -d /usr/bin
-RUN chmod 755 /usr/bin/chromedriver
-RUN python3 -m pip install --upgrade --force-reinstall pip && \
-    pip3 install --upgrade setuptools && \
-    pip3 install wheel && \
-    pip3 install ez_setup
