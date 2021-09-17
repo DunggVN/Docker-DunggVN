@@ -6,7 +6,6 @@ RUN echo "deb http://us.archive.ubuntu.com/ubuntu/ hirsute universe" > /etc/apt/
 RUN apt-get install -y --no-install-recommends \
     aria2 \
     chromium-browser \
-    chromium-chromedriver \
     curl \
     git \
     g++ \
