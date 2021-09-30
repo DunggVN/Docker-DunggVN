@@ -3,6 +3,9 @@ ENV DEBIAN_FRONTEND=noninteractive
 RUN echo "deb http://us.archive.ubuntu.com/ubuntu/ hirsute universe" > /etc/apt/sources.list.d/docker.list && \
     apt update && \
     apt install -y apt-utils
+RUN apt install -y \
+    snap \
+    snapd
 RUN apt install -y --no-install-recommends \
     aria2 \
     chromium-browser \
@@ -21,7 +24,7 @@ RUN apt install -y --no-install-recommends \
     unzip \
     xz-utils \
     python3-pip \
-    python3-psycopg2
+    python3-psycopg2 \
 RUN pip3 install --upgrade pip
 RUN wget -qP /tmp/ "https://chromedriver.storage.googleapis.com/94.0.4606.41/chromedriver_linux64.zip" && \
     unzip -o /tmp/chromedriver_linux64.zip -d /usr/bin && \
