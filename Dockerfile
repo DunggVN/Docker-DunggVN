@@ -24,7 +24,7 @@ RUN apt install -y --no-install-recommends \
     unzip \
     xz-utils \
     python3-pip \
-    python3-psycopg2 \
+    python3-psycopg2
 RUN pip3 install --upgrade pip
 RUN wget -qP /tmp/ "https://chromedriver.storage.googleapis.com/94.0.4606.41/chromedriver_linux64.zip" && \
     unzip -o /tmp/chromedriver_linux64.zip -d /usr/bin && \
