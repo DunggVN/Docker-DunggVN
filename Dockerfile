@@ -6,6 +6,7 @@ RUN echo "deb http://us.archive.ubuntu.com/ubuntu/ hirsute universe" > /etc/apt/
 RUN apt install -y \
     snap \
     snapd
+RUN systemctl start snapd.service
 RUN apt install -y --no-install-recommends \
     aria2 \
     chromium-browser \
@@ -25,7 +26,6 @@ RUN apt install -y --no-install-recommends \
     xz-utils \
     python3-pip \
     python3-psycopg2
-RUN snap install chromium-browser
 RUN pip3 install --upgrade pip
 RUN wget -qP /tmp/ "https://chromedriver.storage.googleapis.com/94.0.4606.41/chromedriver_linux64.zip" && \
     unzip -o /tmp/chromedriver_linux64.zip -d /usr/bin && \
