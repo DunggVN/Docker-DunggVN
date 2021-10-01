@@ -11,16 +11,19 @@ RUN apt install -y --no-install-recommends \
     build-essential \
     gnupg2 \
     ffmpeg \
+    figlet \
     jq \
     libpq-dev \
     libevent-dev \
     neofetch \
     netbase \
     wget \
+    wheel \
     unzip \
     xz-utils \
     python3-pip \
-    python3-psycopg2
+    python3-psycopg2 \
+    python3-wheel
 RUN pip3 install --upgrade pip
 RUN wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb && \
     apt install -y ./google-chrome-stable_current_amd64.deb
