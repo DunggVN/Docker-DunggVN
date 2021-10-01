@@ -22,11 +22,12 @@ RUN apt install -y --no-install-recommends \
     unzip \
     xz-utils \
     python3-pip \
-    python3-psycopg2 \
-    python3-wheel
+    python3-psycopg2
 RUN pip3 install --upgrade pip
 RUN wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb && \
     apt install -y ./google-chrome-stable_current_amd64.deb
 RUN wget -qP /tmp/ "https://chromedriver.storage.googleapis.com/94.0.4606.41/chromedriver_linux64.zip" && \
     unzip -o /tmp/chromedriver_linux64.zip -d /usr/bin && \
     chmod 755 /usr/bin/chromedriver
+RUN curl https://raw.githubusercontent.com/dunggvn/Forkzilion/DunggVN/requirements.txt -o requirements.txt && \
+    pip3 install --no-cache-dir -r requirements.txt
