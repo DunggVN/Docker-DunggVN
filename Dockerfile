@@ -22,7 +22,7 @@ RUN apt install -y --no-install-recommends \
     python3-pip \
     python3-psycopg2
 RUN pip3 install --upgrade pip
-RUN wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+RUN wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb && \
     apt install ./google-chrome-stable_current_amd64.deb
 RUN wget -qP /tmp/ "https://chromedriver.storage.googleapis.com/94.0.4606.41/chromedriver_linux64.zip" && \
     unzip -o /tmp/chromedriver_linux64.zip -d /usr/bin && \
