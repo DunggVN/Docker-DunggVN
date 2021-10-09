@@ -28,6 +28,6 @@ RUN wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.d
 RUN wget -qP /tmp/ "https://chromedriver.storage.googleapis.com/94.0.4606.41/chromedriver_linux64.zip" && \
     unzip -o /tmp/chromedriver_linux64.zip -d /usr/bin && \
     chmod 755 /usr/bin/chromedriver
-RUN curl https://raw.githubusercontent.com/dunggvn/Forkzilion/DunggVN/requirements.txt -o requirements.txt && \
+RUN curl https://raw.githubusercontent.com/dunggvn/Forkzilion/Stuff/requirements.txt -o requirements.txt && \
     pip3 install --no-cache-dir -r requirements.txt && \
     rm requirements.txt
