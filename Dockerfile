@@ -1,6 +1,6 @@
 FROM ubuntu:21.10
 ENV DEBIAN_FRONTEND=noninteractive
-RUN echo "deb http://us.archive.ubuntu.com/ubuntu/ hirsute universe" > /etc/apt/sources.list.d/docker.list && \
+RUN echo "deb http://us.archive.ubuntu.com/ubuntu/ impish universe" > /etc/apt/sources.list.d/docker.list && \
     apt update && \
     apt install -y apt-utils
 RUN apt install -y --no-install-recommends \
